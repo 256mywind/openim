@@ -11,36 +11,36 @@ class Autoloaderim{
           $name = strstr($class, '\\', true);
         }
         
-        $filename = TOP_AUTOLOADER_PATH."/top/".$name.".php";
+        $filename = TOP_AUTOLOADER_PATH_IM."/top/".$name.".php";
         if(is_file($filename)) {
             include $filename;
             return;
         }
 
-        $filename = TOP_AUTOLOADER_PATH."/top/request/".$name.".php";
+        $filename = TOP_AUTOLOADER_PATH_IM."/top/request/".$name.".php";
         if(is_file($filename)) {
             include $filename;
             return;
         }
-        $filename = TOP_AUTOLOADER_PATH."/top/domain/".$name.".php";
-        if(is_file($filename)) {
-            include $filename;
-            return;
-        }
-
-        $filename = TOP_AUTOLOADER_PATH."/aliyun/".$name.".php";
+        $filename = TOP_AUTOLOADER_PATH_IM."/top/domain/".$name.".php";
         if(is_file($filename)) {
             include $filename;
             return;
         }
 
-        $filename = TOP_AUTOLOADER_PATH."/aliyun/request/".$name.".php";
+        $filename = TOP_AUTOLOADER_PATH_IM."/aliyun/".$name.".php";
         if(is_file($filename)) {
             include $filename;
             return;
         }
 
-        $filename = TOP_AUTOLOADER_PATH."/aliyun/domain/".$name.".php";
+        $filename = TOP_AUTOLOADER_PATH_IM."/aliyun/request/".$name.".php";
+        if(is_file($filename)) {
+            include $filename;
+            return;
+        }
+
+        $filename = TOP_AUTOLOADER_PATH_IM."/aliyun/domain/".$name.".php";
         if(is_file($filename)) {
             include $filename;
             return;
