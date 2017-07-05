@@ -37,7 +37,7 @@ class TopLogger
 			$logData = implode($this->conf["separator"], $logData);
 		}
 		$logData = $logData. "\n";
-		fwrite($this->getFileHandle(), $logData);
+		@fwrite($this->getFileHandle(), $logData);
 	}
 }
 ?>
